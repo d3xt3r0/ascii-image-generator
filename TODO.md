@@ -3,5 +3,5 @@
 [x] Read your image and print its height and width in pixels
 [x] Load your image’s pixel data into a 2-dimensional array
 [x] Convert the RGB tuples of your pixels into single brightness numbers
-[ ] Convert brightness numbers to ASCII characters
+[x] Convert brightness numbers to ASCII characters
 [ ] Print your ASCII art!
