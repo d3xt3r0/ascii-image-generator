@@ -4,11 +4,17 @@ Welcome to ascii-art-generator!
 
 ## How to install the project
 
-TODO
+Use the REQUIREMENTS.txt file to install the dependencies on your system
+
+```bash
+pip install REQUIREMENTS.txt
+```
 
 ## How to run the project
 
-TODO
+```bash
+python main.py
+```
 
 ## Author
 
