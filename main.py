@@ -16,7 +16,7 @@ def read_image(loc):
         print(error)
 
     # convert the image as a 2D array
-
+    image.thumbnail((300, 100))
     pixel_data = list(image.getdata())
 
     pixel_matrix = []
@@ -57,10 +57,26 @@ def convert_to_ascii(intensity_matrix, ascii_chars):
     for row in intensity_matrix:
         temp = []
         for value in row:
-            temp.append(ascii_chars[int(value/255 * len(ascii_chars))])
+            temp.append(ascii_chars[int(value * (len(ascii_chars) / 255) ) - 1])
         ascii_matrix.append(temp)
 
     return ascii_matrix
+
+
+def print_ascii_matrix(ascii_matrix):
+    '''
+    you thought right, it prints the ascii matrix
+    
+    '''
+    # print("\n")
+    # for row in ascii_matrix:
+    #     for pixel in row:
+    #         print(pixel,end="")
+
+    for row in ascii_matrix:
+        line = [p+p for p in row]
+        print("".join(line))
+
 
 
 
@@ -68,8 +84,7 @@ def convert_to_ascii(intensity_matrix, ascii_chars):
 if __name__ == "__main__":
     print("Welcome to ascii-art-generator!\n")
 
-    pixel_matrix = read_image("res/ascii-pineapple.jpg")
+    pixel_matrix = read_image("res/test.png")
     intensity_matrix = get_intensity_matrix(pixel_matrix)
     ascii_matrix = convert_to_ascii(intensity_matrix, ASCII_CHARS)
-
-    print(ascii_matrix[-1])
+    print_ascii_matrix(ascii_matrix)

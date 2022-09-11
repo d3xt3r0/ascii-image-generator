@@ -4,4 +4,4 @@
 [x] Load your image’s pixel data into a 2-dimensional array
 [x] Convert the RGB tuples of your pixels into single brightness numbers
 [x] Convert brightness numbers to ASCII characters
-[ ] Print your ASCII art!
+[x] Print your ASCII art!
